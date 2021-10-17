@@ -1,8 +1,8 @@
-let noteTitle;
-let noteText;
-let saveNoteBtn;
-let newNoteBtn;
-let noteList;
+const noteTitle;
+const noteText;
+const saveNoteBtn;
+const newNoteBtn;
+const noteList;
 
 if (window.location.pathname === '/notes') {
   noteTitle = document.querySelector('.note-title');
@@ -23,7 +23,7 @@ const hide = (elem) => {
 };
 
 // activeNote is used to keep track of the note in the textarea
-let activeNote = {};
+const activeNote = {};
 
 const getNotes = () =>
   fetch('/api/notes', {
@@ -125,7 +125,7 @@ const renderNoteList = async (notes) => {
     noteList.forEach((el) => (el.innerHTML = ''));
   }
 
-  let noteListItems = [];
+  const noteListItems = [];
 
   // Returns HTML element with or without a delete button
   const createLi = (text, delBtn = true) => {
