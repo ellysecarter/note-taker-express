@@ -1,10 +1,17 @@
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
+
 const app = express();
+
 const dbDir = path.resolve(__dirname, "db");
 const rawData = fs.readFileSync(path.resolve(dbDir, "db.json"));
 const dbNotes = JSON.parse(rawData);
+
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.static('public'));
 
 
 
