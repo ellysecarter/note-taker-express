@@ -1,27 +1,27 @@
 [
     {
         "title": "Errands",
-        "text": "grocery store, tire shop, mom's house, gas station",
+        "text": ["grocery store", "tire shop", "mom's house", "gas station"],
         "id": 0
     },
     {
         "title": "Portfolio Challenge",
-        "text": "fix GitHub link, upload recent projects, resubmit",
+        "text": ["fix GitHub link", "upload recent projects", "resubmit"],
         "id": 1
     },
     {
         "title": "Vacation!",
-        "text": "book hotel, order tickets to festival, get rental car",
+        "text": ["book hotel", "order tickets to festival", "get rental car"],
         "id": 2
     },
     {
         "title": "Grocery List",
-        "text": "tomatoes, fish, rice, potatoes, veggies, soup, wine",
+        "text": ["tomatoes", "fish", "rice", "potatoes", "veggies", "soup", "wine"],
         "id": 3
     },
     {
         "title": "Gym",
-        "text": "run 3 miles, legs 1 hour, arms 30 minutes",
+        "text": ["run 3 miles", "legs 1 hour", "arms 30 minutes"],
         "id": 4
     }
 ]
