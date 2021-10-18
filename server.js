@@ -2,17 +2,23 @@ const express = require("express");
 const path = require("path");
 const fs = require("fs");
 
+const apiRoutes = require('./routes/apiRoutes');
+const htmlRoutes = require('./routes/htmlRoutes');
 
-const PORT = process.env.PORT || 3001;
-const app = express();
+// const { notes } = require('./db/db.json')
 
 const dbDir = path.resolve(__dirname, "db");
 const rawData = fs.readFileSync(path.resolve(dbDir, "db.json"));
 const dbNotes = JSON.parse(rawData);
 
+const app = express();
+const PORT = process.env.PORT || 3001;
+
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use('/api', apiRoutes);
+app.use('/', htmlRoutes);
 app.use(express.static('public'));
 
 // set id's
