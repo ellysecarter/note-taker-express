@@ -18,6 +18,6 @@ app.use(express.static('public'));
 const { notes } = require('./db/db.json')
 
   // listener
-  app.listen(PORT, function () {
-    console.log("App listening on PORT " + PORT);
+  app.listen(PORT, () => {
+    console.log(`API Server running on port ${PORT}`);
   });
