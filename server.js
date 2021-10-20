@@ -14,6 +14,8 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use('/', htmlRoutes);
+app.use('/api', apiRoutes);
+
 app.use(express.static('public'));
 
 const { notes } = require('./db/db.json')
