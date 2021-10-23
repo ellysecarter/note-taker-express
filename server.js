@@ -9,17 +9,15 @@ const PORT = process.env.PORT || 3006;
 
 const app = express();
 
-
 // middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use('/', htmlRoutes);
-app.use('/api', apiRoutes);
-
 app.use(express.static('public'));
+app.use('/api', apiRoutes);
+app.use('/', htmlRoutes);
+
 
 const { notes } = require('./db/db.json')
-
 
 
   // listener
